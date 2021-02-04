@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap')");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap');");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&display=swap');");
+@import url("./footerStyle.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.grid {
+  margin: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 23vh 77vh;
+  grid-gap: 0px 16px;
+}
+
+.item {
+  padding: 30px;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+/* *********** */
+/*     Nav     */
+/* *********** */
+.item.nav {
+  grid-area: 1/1/2/13;
+  padding: 0;
+  padding: 20px 0px;
+}
+
+.logo img {
+  position: relative;
+  top: -0.7em;
+  width: 180px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links > ul > li {
+  list-style: none;
+  padding-left: 3em;
+  padding-bottom: 0.3em;
+  flex: 1;
+}
+
+.nav-links > ul > li > a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 800;
+  border-bottom: 4px dotted transparent;
+  transition: color ease-in-out 0.3s;
+  transition: border-bottom ease-in-out 0.5s;
+}
+/* Nav Hovers*/
+.nav-links > ul > .home-nav > a:hover {
+  color: #4c9bd2;
+  border-bottom: 4px dotted #4c9bd2;
+}
+
+.nav-links > ul > .activiteiten-nav > a:hover {
+  color: #f9b715;
+  border-bottom: 4px dotted #f9b715;
+}
+
+.nav-links > ul > .vrijwilligers-nav > a:hover {
+  color: #4caf4f;
+  border-bottom: 4px dotted #4caf4f;
+}
+
+.nav-links > ul > .login-nav > a {
+  color: #ad5ea3;
+  border-bottom: 4px dotted #ad5ea3;
+}
+
+/*******************
+SELECTION STYLING
+*******************/
+
+::selection {
+  color: #fff;
+  background: #f676b2;
+  /* Safari */
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #f676b2;
+  /* Firefox */
+}
+
+/*******************
+BODY STYLING
+*******************/
+
+#wrapper {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -200px;
+}
+
+/*******************
+LOGIN FORM
+*******************/
+
+.login-form {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  background: #f3f3f3;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+/*******************
+HEADER
+*******************/
+
+.login-form .header {
+  padding: 40px 30px 30px 30px;
+}
+
+.login-form .header h1 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 34px;
+  color: #414848;
+  text-shadow: 1px 1px 0 rgba(256, 256, 256, 1);
+  margin-bottom: 10px;
+}
+
+.login-form .header span {
+  font-size: 11px;
+  line-height: 16px;
+  color: #678889;
+  text-shadow: 1px 1px 0 rgba(256, 256, 256, 1);
+}
+
+/*******************
+CONTENT
+*******************/
+
+.login-form .content {
+  padding: 0 30px 25px 30px;
+}
+
+.login-form .content .input {
+  width: 188px;
+  padding: 15px 25px;
+
+  font-weight: 400;
+  font-size: 14px;
+  color: #9d9e9e;
+  text-shadow: 1px 1px 0 rgba(256, 256, 256, 1);
+
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.login-form .content .password,
+.login-form .content .pass-icon {
+  margin-top: 25px;
+}
+
+.login-form .content .input:hover {
+  background: #dfe9ec;
+  color: #414848;
+}
+
+.user-icon,
+.pass-icon {
+  width: 46px;
+  height: 47px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  padding-right: 2px;
+  z-index: 3;
+
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottomleft: 5px;
+}
+
+.user-icon {
+  top: 120px;
+  background: rgba(65, 72, 72, 0.75) url(./images/user-icon.png) no-repeat
+    center;
+}
+
+.pass-icon {
+  top: 190px;
+  background: rgba(65, 72, 72, 0.75) url(./images/pass-icon.png) no-repeat
+    center;
+}
+
+/* Animation */
+.input,
+.user-icon,
+.pass-icon,
+.button,
+.register {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+}
+
+/*******************
+FOOTER LOGIN
+*******************/
+
+.footerLogin {
+  padding: 25px 30px 40px 30px;
+  overflow: auto;
+  background: #d4dedf;
+  border-top: 1px solid #fff;
+}
+
+.login a {
+  text-decoration: none;
+  padding: 15px 65px 15px 70px;
+  font-weight: 200;
+  font-size: 18px;
+  color: #fff;
+
+  background: #ad5ea3;
+  border: 1px solid #ad5ea3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 420px) {
+  .grid {
+    margin: 0 5px;
+    grid-template-rows: 25vh 75v;
+  }
+
+  .item.nav {
+    grid-area: 1/1/2/13;
+    padding: 0;
+    padding: 15px 0px;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+  .nav-links > ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .nav-links > ul > li {
+    padding-left: 0.5em;
+  }
+}

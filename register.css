@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap')");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap');");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&display=swap');");
+@import url("./footerStyle.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.grid {
+  margin: 0 200px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 23vh 77vh;
+  grid-gap: 0px 16px;
+}
+
+.item {
+  padding: 30px;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+/* *********** */
+/*     Nav     */
+/* *********** */
+.item.nav {
+  grid-area: 1/1/2/13;
+  padding: 0;
+  padding: 20px 0px;
+}
+
+.logo img {
+  width: 180px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links > ul > li {
+  list-style: none;
+  padding-left: 3em;
+  flex: 1;
+}
+
+.nav-links > ul > li > a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 800;
+  border-bottom: 4px dotted transparent;
+  transition: color ease-in-out 0.3s;
+  transition: border-bottom ease-in-out 0.5s;
+}
+
+/* Nav Hovers*/
+.nav-links > ul > .home-nav > a:hover {
+  color: #4c9bd2;
+  border-bottom: 4px dotted #4c9bd2;
+}
+
+.nav-links > ul > .activiteiten-nav > a:hover {
+  color: #f9b715;
+  border-bottom: 4px dotted #f9b715;
+}
+
+.nav-links > ul > .vrijwilligers-nav > a:hover {
+  color: #4caf4f;
+  border-bottom: 4px dotted #4caf4f;
+}
+.nav-links > ul > .login-nav > a {
+  color: #ad5ea3;
+  border-bottom: 4px dotted #ad5ea3;
+}
+/*******************
+    BODY STYLING
+*******************/
+
+#wrapper {
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+/*******************
+  Register FORM
+*******************/
+a {
+  text-decoration: none;
+}
+.register-form {
+  grid-area: 2/5/2/8;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  background: #f3f3f3;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+/*******************
+      HEADER
+*******************/
+
+.register-form .header {
+  padding: 40px 30px 30px 30px;
+}
+
+.register-form .header h1 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 34px;
+  color: #414848;
+  text-shadow: 1px 1px 0 rgba(256, 256, 256, 1);
+  margin-bottom: 10px;
+}
+
+/*******************
+      CONTENT
+*******************/
+
+.register-form .content {
+  padding: 0 30px 25px 30px;
+}
+
+.register-form .content .input {
+  width: 188px;
+  padding: 15px 25px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9d9e9e;
+  text-shadow: 1px 1px 0 rgba(256, 256, 256, 1);
+
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.register-form .content .input:hover {
+  background: #dfe9ec;
+  color: #414848;
+}
+
+/*******************
+FOOTER REGISTER
+*******************/
+
+.footerRegister {
+  padding: 25px 30px 25px 30px;
+  overflow: auto;
+  background: #d4dedf;
+  border-top: 1px solid #fff;
+}
+
+.register-form .register a {
+  text-decoration: none;
+  padding: 15px 65px 15px 70px;
+  font-weight: 200;
+  font-size: 18px;
+  color: #fff;
+
+  background: #ad5ea3;
+  border: 1px solid #ad5ea3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-form .login .button:focus {
+  position: relative;
+}
+
+.register-form .register {
+  float: center;
+  padding: 10px;
+  margin-right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
