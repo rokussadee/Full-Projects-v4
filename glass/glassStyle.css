@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.glass h1 {
+  color: #3990c4;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.glass h2,
+.glass p {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+}
+/* 
+.glass main {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.glass {
+  position: absolute;
+  left: 15%;
+  min-height: 80%;
+  width: 400px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2.5rem);
+  display: flex;
+}
+
+.dashboard {
+  width: inherit;
+  height: inherit;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.paragraph {
+  height: 40%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 5rem;
+  align-items: center;
+}
+
+.buttons {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+  width: 80%;
+  height: 20%;
+}
+
+.buttons h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.button-1,
+.button-2 {
+  background: linear-gradient(to right top, #3990c4, #6cdbeb);
+  border-radius: 2rem;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  margin: 1rem;
+  width: 80%;
+  transition: ease-in-out 0.8s;
+}
+
+.button-1 button,
+.button-2 button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+.button-1 button a,
+.button-2 button a {
+  color: white;
+  font-size: 20px;
+  transition: ease-in-out 0.3s;
+}
+
+.button-2:hover {
+  /* font-size: 23px; */
+  background: linear-gradient(to left bottom, #3990c4, #6cdbeb);
+  transition: ease-in-out 0.8s;
+}
+
+/* tablet */
+@media only screen and (max-width: 768px) {
+  .glass {
+    left: auto;
+    min-height: 40%;
+    height: 60%;
+    width: 75vw;
+    margin: auto;
+  }
+
+  .dashboard {
+    height: auto;
+  }
+
+  .glass p {
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .glass h1 {
+    color: #3990c4;
+    font-weight: 500;
+    font-size: 3em;
+    opacity: 0.8;
+  }
+
+  .text {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .button-2 {
+    position: relative;
+  }
+  .button-2 button {
+    position: relative;
+  }
+
+  .button-1 button a,
+  .button-2 button a {
+    color: white;
+    font-size: 14px;
+    transition: ease-in-out 0.3s;
+  }
+
+  .button-2 button a:hover {
+    font-size: 16px;
+  }
+}
+
+/* desktop */
+@media only screen and (max-width: 1024px) {
+  /* .glass {
+    position: absolute;
+    left: 15%;
+    min-height: 80%;
+    width: 35vw;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.1)
+    );
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2.5rem);
+    display: flex;
+  } */
+}

@@ -1,0 +1,941 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap')");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap');");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&display=swap');");
+@import url("./glass/glassStyle.css");
+@import url("./footerStyle.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.grid {
+  margin: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 23vh 77vh 100vh 100vh 50vh 50vh 100vh;
+  grid-gap: 0px 16px;
+}
+
+.item {
+  padding: 30px;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+/* *********** */
+/*     Nav     */
+/* *********** */
+.item.nav {
+  grid-area: 1/1/2/13;
+  padding: 0;
+  padding: 20px 0px;
+}
+
+.logo img {
+  position: relative;
+  top: -0.7em;
+  width: 180px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links > ul > li {
+  list-style: none;
+  padding-left: 3em;
+  padding-bottom: 0.3em;
+  flex: 1;
+}
+
+.nav-links > ul > li > a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 800;
+  border-bottom: 4px dotted transparent;
+  transition: color ease-in-out 0.3s;
+  transition: border-bottom ease-in-out 0.5s;
+}
+/* Nav Hovers*/
+.nav-links > ul > .home-nav > a {
+  color: #4c9bd2;
+  border-bottom: 4px dotted #4c9bd2;
+}
+
+.nav-links > ul > .activiteiten-nav > a:hover {
+  color: #f9b715;
+  border-bottom: 4px dotted #f9b715;
+}
+
+.nav-links > ul > .vrijwilligers-nav > a:hover {
+  color: #4caf4f;
+  border-bottom: 4px dotted #4caf4f;
+}
+
+.nav-links > ul > .login-nav > a:hover {
+  color: #ad5ea3;
+  border-bottom: 4px dotted #ad5ea3;
+}
+
+/* ************ */
+/*     Home     */
+/* ************ */
+
+/* ***
+Home 1
+*** */
+
+.item.home1 {
+  grid-area: 2/1/3/13;
+  padding-top: 0px;
+  overflow: hidden;
+  padding: 0;
+}
+.page1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+/* 
+.team {
+  position: absolute;
+  top: -200px;
+  width: 100%;
+} */
+
+.team {
+  position: absolute;
+  top: -200px;
+  width: 100%;
+  min-width: 1275px;
+}
+
+.flag-1 {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 130%;
+  transition: ease-in-out 0.3s;
+}
+
+.flag-1:hover {
+  width: 140%;
+}
+/* 
+.spelotheek-img {
+  grid-area: 3/1/4/5;
+} */
+
+/* ***
+Introductietekst
+*** */
+
+.item.homeTekst {
+  padding: 0px;
+  margin: auto;
+  grid-area: 3/3/4/11;
+  overflow: hidden;
+}
+
+.pageTekst {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageTekst-tekst {
+  width: 100%;
+  padding: 0px 12%;
+  border-left: 3px solid #4c9bd2;
+}
+
+.tekstjeTitel,
+.adres > h3 {
+  color: #4c9bd2;
+  font-size: 2rem;
+  padding-bottom: 1em;
+  font-weight: 600;
+}
+
+.tekstjeTitel.two {
+  padding-top: 2em;
+}
+
+.stap {
+  font-weight: 300;
+}
+/* ***
+Home 2 
+*** */
+
+.item.home2 {
+  /* display: grid; */
+  grid-area: 4/1/5/13;
+  overflow: hidden;
+}
+
+.page2 {
+  
+  /* position: relative;
+  display: grid;
+  grid-area: 4/4/5/10;
+  overflow: hidden;
+  height: 100%; */
+}
+
+.page2 {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: auto;
+  height: auto;
+}
+
+.page2 div {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 39%;
+  text-align: center;
+  width: 75%;
+  height: 10%;
+  /* text-align: center; */
+}
+
+.page2 h2 {
+  font-size: 10pt;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+  text-decoration: none;
+  color: black;
+  animation: wiggle 2s infinite;
+  animation-timing-function: ease-in-out;
+  transition: 0.3s ease;
+}
+.page2 h2 a.wiggle:hover {
+  animation: wiggle2 1s infinite;
+  font-size: 15pt;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  65% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes wiggle2 {
+  0% {
+    transform: rotate(5deg);
+  }
+  10% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  30% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  90% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+.page2 h3 a.wiggle {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 10pt;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  animation: wiggle 2s infinite;
+  animation-timing-function: ease-in-out;
+  transition: 0.3s ease;
+}
+
+.page2 h3 a.wiggle:hover {
+  animation: wiggle2 1s infinite;
+  font-size: 30pt;
+}
+
+.wordVrijwilliger {
+  margin: auto;
+  width: 200px;
+}
+
+/* ***
+Contacts
+*** */
+
+.contacts {
+  display: grid;
+  grid-area: 5/1/7/13;
+  margin: 0;
+  padding: 0;
+}
+
+/* ***
+Contacts - Lisette
+*** */
+
+.contactpage.one {
+  grid-area: 5/1/6/6;
+}
+
+.contact1 {
+  position: relative;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.contact1 > img {
+  width: 320px;
+  /* margin-right: auto; */
+}
+
+.contact1 > div {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100px;
+  left: 90px;
+}
+
+.contact1 > div > img {
+  width: 220px;
+  border-radius: 800px;
+  overflow: hidden;
+}
+
+.c1-text {
+  grid-area: 6/1/7/5;
+  align-self: center;
+}
+
+/* ***
+Contacts - Second
+*** */
+
+.contactpage.two {
+  grid-area: 5/8/6/13;
+}
+
+.contact2 {
+  position: relative;
+  padding: 50px;
+  left: 20%;
+  overflow: hidden;
+}
+
+.contact2 > img {
+  width: 300px;
+  /* margin-right: auto; */
+}
+
+.contact2 > div {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 85px;
+  left: 85px;
+}
+
+.contact2 > div > img {
+  width: 220px;
+  border-radius: 800px;
+  overflow: hidden;
+}
+
+.c2-text {
+  grid-area: 6/9/7/13;
+  align-self: center;
+}
+
+/* ***
+Contacts - Third
+*** */
+
+.contactpage.three {
+  grid-area: 6/4/7/10;
+}
+
+.contact3 {
+  position: relative;
+  left: 20%;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.contact3 > img {
+  width: 300px;
+  /* margin-right: auto; */
+}
+
+.contact3 > div {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 110px;
+  left: 95px;
+}
+
+.contact3 > div > img {
+  width: 220px;
+  border-radius: 800px;
+  overflow: hidden;
+}
+
+.c3-text {
+  grid-area: 5/5/6/9;
+  align-self: center;
+}
+
+/* **************** */
+/*     Contact hovers     */
+/* **************** */
+
+.one p,
+.two p,
+.three p {
+  padding-top: 2em;
+  padding-bottom: 0;
+}
+
+.contactpage {
+  transition: ease-in-out 0.3s;
+}
+
+/* .contactpage:not(.contactpage:hover) {
+  filter: blur(10px);
+  transition: ease-in-out 0.3s;
+} */
+/* 
+.contactpage:hover ~ .contactpage:not(.contactpage:hover) {
+  filter: blur(10px);
+  transition: ease-in-out 0.3s;
+} */
+
+.four {
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-bottom: 1em;
+}
+
+.lastName {
+  font-weight: bold;
+}
+
+.typewriter1.four {
+  color: #4c9bd2;
+}
+
+.typewriter2.four {
+  color: #4caf4e;
+}
+
+.typewriter3.four {
+  color: #f9b715;
+}
+
+.contactpage.one:not(.contactpage:hover) + .c1-text > div,
+.contactpage.two:not(.contactpage:hover) + .c2-text > div,
+.contactpage.three:not(.contactpage:hover) + .c3-text > div {
+  display: none;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 400px;
+  }
+}
+/* 
+.contactpage.three:hover + .c3-text > div {
+  width: 100px;
+  border-right: 0.15em solid #f9b715;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing2 1.5s ease, 0.75s step-end;
+} */
+
+.contactpage.two:hover + .c2-text > div,
+.contactpage.one:hover + .c1-text > div,
+.contactpage.three:hover + .c3-text > div {
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.5s ease, 0.75s step-end;
+}
+
+.contactpage.one:hover + .c1-text > div {
+  border-right: 0.15em solid #4c9bd2;
+}
+
+.contactpage.two:hover + .c2-text > div {
+  border-right: 0.15em solid #4caf4e;
+}
+
+.contactpage.three:hover + .c3-text > div {
+  border-right: 0.15em solid #f9b715;
+}
+
+/* ************************* */
+/*     Locatie               */
+/* ************************* */
+
+.item.home3 {
+  grid-area: 7/1/8/7;
+  padding-top: 15%;
+  overflow: hidden;
+  /* padding: 0; */
+}
+
+.item.home4 {
+  /* position: relative; */
+  grid-area: 7/9/9/13;
+  padding-top: 80%;
+  overflow: hidden;
+  /* padding: 0; */
+}
+
+.adres h3,
+.adres p,
+.adres a {
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1500px) {
+  .c1-text,
+  .c2-text,
+  .c3-text {
+    font-size: 0.9em;
+  }
+
+  .c1-text {
+    grid-area: 6/2/7/5;
+  }
+
+  .c2-text {
+    grid-area: 6/10/7/13;
+  }
+
+  .c3-text {
+    grid-area: 5/6/6/9;
+  }
+
+  @keyframes typing2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 290px;
+    }
+  }
+
+  .contactpage.three:hover + .c3-text > div,
+  .contactpage.one:hover + .c1-text > div,
+  .contactpage.two:hover + .c2-text > div {
+    width: 290px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing2 1.5s ease, 0.75s step-end;
+  }
+
+  .four {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    margin: 0 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 30vh 70vh 100vh 100vh 33vh 33vh 33vh 100vh 50vh;
+  }
+  /* Contact */
+
+  .contactpage.one:not(.contactpage:hover) + .c1-text > div,
+  .contactpage.two:not(.contactpage:hover) + .c2-text > div,
+  .contactpage.three:not(.contactpage:hover) + .c3-text > div {
+    display: block;
+  }
+
+  .one p,
+  .two p,
+  .three p {
+    padding-top: 0.2em;
+    padding-bottom: 0;
+  }
+  /* 
+  .contactpage.one + .c1-text > div,
+  .contactpage.two + .c2-text > div,
+  .contactpage.three + .c3-text > div {
+    display: block;
+    width: 290px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: none;
+  } */
+
+  .contactpage.three:hover + .c3-text > div,
+  .contactpage.one:hover + .c1-text > div,
+  .contactpage.two:hover + .c2-text > div {
+    width: 290px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: none;
+  }
+
+  /* Contact 1 */
+  .contactpage.one {
+    grid-area: 5/1/6/5;
+  }
+
+  .contact1 {
+    position: relative;
+    padding: 10px;
+    overflow: visible;
+  }
+
+  .contact1 > img {
+    width: 170px;
+    /* margin-right: auto; */
+  }
+
+  .contact1 > div {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 35px;
+    left: 30px;
+  }
+
+  .contact1 > div > img {
+    width: 120px;
+    border-radius: 800px;
+    overflow: hidden;
+  }
+
+  .c1-text {
+    grid-area: 5/6/6/13;
+    align-self: center;
+  }
+
+  /* Contact 2 */
+  .contactpage.two {
+    grid-area: 6/1/7/5;
+  }
+
+  .contact2 {
+    position: relative;
+    padding: 10px;
+    left: 0%;
+    overflow: visible;
+  }
+
+  .contact2 > img {
+    width: 170px;
+    left: 0;
+    /* margin-right: auto; */
+  }
+
+  .contact2 > div {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 33px;
+    left: 33px;
+  }
+
+  .contact2 > div > img {
+    width: 120px;
+    border-radius: 800px;
+    overflow: hidden;
+  }
+
+  .c2-text {
+    grid-area: 6/6/7/13;
+    align-self: center;
+  }
+
+  /* Contact 3 */
+  .contactpage.three {
+    grid-area: 7/1/8/5;
+  }
+
+  .contact3 {
+    position: relative;
+    padding: 10px;
+    left: 0%;
+    overflow: visible;
+  }
+
+  .contact3 > img {
+    width: 170px;
+  }
+
+  .contact3 > div {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 44px;
+    left: 37px;
+  }
+
+  .contact3 > div > img {
+    width: 120px;
+    border-radius: 800px;
+    overflow: hidden;
+  }
+
+  .c3-text {
+    grid-area: 7/6/8/13;
+    align-self: center;
+  }
+
+  .item.home3 {
+    grid-area: 8/2/9/12;
+    position: relative;
+    top: 10%;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+  }
+
+  .item.home4 {
+    /* position: relative; */
+    grid-area: 9/1/10/13;
+    overflow: hidden;
+    padding: 0 0 0 33%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid {
+    margin: 0 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 30vh 70vh 100vh 100vh 33vh 33vh 33vh 100vh 50vh;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .item.homeTekst {
+    grid-area: 3/1/4/13;
+  }
+
+  .pageTekst-tekst {
+    width: 100%;
+    padding: 0px 12%;
+    border-left: 3px solid transparent;
+  }
+
+  /* Word Vrijwilliger */
+  .page2 {
+    grid-area: 4/1/5/13;
+  }
+
+  .page2 > div {
+    top: 45%;
+    width: 100%;
+  }
+
+  .page2 h2 {
+    font-size: 22pt;
+  }
+
+  .page2 h3 a.wiggle {
+    font-size: 13pt;
+  }
+
+  .page2 h3 a.wiggle:hover {
+    font-size: 16pt;
+  }
+
+  .wordVrijwilliger {
+    width: 500px;
+  }
+
+  /* Adres */
+
+  .item.home3 {
+    grid-area: 8/2/9/12;
+    position: relative;
+    top: 10%;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+  }
+
+  .item.home4 {
+    /* position: relative; */
+    grid-area: 9/1/10/13;
+    overflow: hidden;
+    padding: 0 0 0 33%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    margin: 0 5px;
+    grid-template-rows: 35vh 65vh 100vh 100vh 55vh 55vh 55vh 100vh 50vh;
+  }
+
+  .nav-links > ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item.home3 {
+    grid-area: 8/1/9/13;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .item.home4 {
+    /* position: relative; */
+    grid-area: 9/1/9/13;
+    overflow: hidden;
+    padding: 0 0 0 33%;
+  }
+
+  .contact1 > div {
+    top: 35px;
+    left: 10px;
+  }
+
+  .contact2 > div {
+    top: 33px;
+    left: 10px;
+  }
+
+  .contact3 > div {
+    top: 44px;
+    left: 10px;
+  }
+
+  .contact1 > img,
+  .contact2 > img,
+  .contact3 > img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .grid {
+    margin: 0 5px;
+    grid-template-rows: 25vh 75vh 100vh 100vh 55vh 55vh 55vh 100vh 50vh;
+  }
+  .item.nav {
+    grid-area: 1/1/2/13;
+    padding: 0;
+    padding: 15px 0px;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+  .nav-links > ul {
+    text-align: left;
+  }
+  .nav-links > ul > li {
+    padding-left: 0.5em;
+  }
+  /* Tekst titels*/
+  .tekstjeTitel {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+  }
+
+  .tekstjeTitel.two {
+    padding-top: 1em;
+  }
+
+  /* Word Vrijwilliger */
+  .wordVrijwilliger {
+    width: 300px;
+  }
+
+  .page2 h2 {
+    font-size: 22pt;
+  }
+
+  .page2 h3 a.wiggle {
+    font-size: 11pt;
+  }
+
+  .page2 h3 a.wiggle:hover {
+    font-size: 10pt;
+  }
+
+  /* Map */
+  .item.home4 {
+    /* position: relative; */
+    grid-area: 9/1/10/13;
+    overflow: hidden;
+    padding: 0 0 0 20%;
+  }
+}

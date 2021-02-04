@@ -1,0 +1,17 @@
+[
+    {
+        "titel":"Event 1",
+        "beschrijving":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis dignissimos modi iste necessitatibus eveniet quibusdam similique itaque! Corrupti, minus.",
+        "datum":"13/04/2021"
+    },
+    {
+        "titel":"Event 2",
+        "beschrijving":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae in, maxime maiores aliquid expedita earum.",
+        "datum":"14/04/2021"
+    },
+    {
+        "titel":"Event 2",
+        "beschrijving":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae in, maxime maiores aliquid expedita earum.",
+        "datum":"14/04/2021"
+    }
+]

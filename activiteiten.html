@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./activiteiten.css" />
+    <title>Activiteiten</title>
+    <script
+    src="http://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
+  </script>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="item nav">
+        <nav>
+          <div class="logo">
+            <img src="./full_projects_imgs/stapsteenlogov3.svg"/>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li class="home-nav"><a href="./index.html">Home</a></li>
+              <li class="activiteiten-nav">
+                <a href="#">Activiteiten</a>
+              </li>
+              <li class="vrijwilligers-nav">
+                <a href="./vrijwilligers.html">Vrijwilligers</a>
+              </li>
+              <li class="login-nav">
+                  <a href="./login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="item home1">
+        <div class="page1">
+          <img
+            class="team"
+            src="./full_projects_imgs/Activiteiten foto2.jpg"
+            alt=""
+          />
+          <img
+            class="flag-1"
+            src="./full_projects_imgs/rectangle_yellow.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="item home kalender">
+        <!-- content uit eventdata.json -->
+      </div>
+
+      <div class="item home4">
+          <div class="page three">
+              <img class="page3-img" src= "full_projects_imgs/Stapsteen kids.png" alt="">
+          </div>
+      </div>
+
+      <div class="item home2">
+        <div class="page two"> 
+          <div class="page2-tekst">
+          <h2><span class="thin">stap</span>steen kids</h2>
+            <p>Stapsteen kids is een kinderwerking voor de gezinnen in de buurt van ons StapSteen huis in Laken.<br>
+             <p>Deze kinderclub gaat tweewekelijks door op zondagnamiddag.</p>
+            <p> De activiteiten kunnen gaan van knutselen tot koken of sport en spel. We proberen een divers programma aan te bieden.</p>
+             <p>We leren de kinderen nieuwe manieren om hun vrije tijd op een positieve manier in te vullen en op een respectvolle manier met elkaar om te gaan en met elkaar te communiceren.</p>
+             <p>Deze namiddagen zijn een goede gelegenheid om met de kinderen spelenderwijs positieve communicatie en sociale vaardigheden te oefenen.</p>
+             <p>We proberen ook om met de ouders contact op te bouwen bij onthaal en afhalen en door een huisbezoekje.</p>
+            </div>
+        </div>
+      </div>              
+
+
+      <div class="item home5">
+        <div class="page three">
+            <img class="page4-img" src= "https://scontent.fbru1-1.fna.fbcdn.net/v/t1.0-9/136639333_2162112700590274_4562211829270803804_o.jpg?_nc_cat=105&ccb=2&_nc_sid=730e14&_nc_ohc=kIkDhAS1T-MAX9LadRo&_nc_ht=scontent.fbru1-1.fna&oh=c9b159978eee3a93f32f36b358cacb74&oe=603B785C" alt="">
+        </div>
+      </div>
+
+
+      <div class="item home3">
+          <div class="page five">
+            <div class="page5-tekst">
+            <h2><span class="thin">spelo</span>theek</h2>
+              <p>In onze spelotheek kan je gezelschapsspelletjes uitlenen zoals je in een bibliotheek boeken leent.</p>
+                  <p>We hebben een divers aanbod aan spelletjes voor kinderen van 2 tot 12 jaar.</p>
+                 <p> Deze spelotheek wordt nu uitgebreid met een groter aanbod speciaal voor 1 tot 6-jarigen.</p>
+                  <p>We doorbreken het isolement, die eigen is aan de stedelijke context, door plaatsen van ontmoeting te stimuleren. De spelotheek is een toegankelijke manier om ouders en kinderen te bereiken.</p>
+                  Het is een laagdrempelige plaats waar ouders en kinderen zich welkom en gezien voelen. We geven kinderen de gelegenheid tot het ontdekken van spellen waarmee ze hun vaardigheden op cognitief, sociaal – emotioneel en lichamelijk vlak kunnen verbeteren.<p>
+                    </p>
+                  </p>
+            </div>
+          </div>
+      </div>
+
+      <div id="my_pdf_viewer">
+          <div id="canvas_container">
+              <canvas id="pdf_renderer"></canvas>
+          </div>
+   
+          <div id="navigation_controls">
+              <button id="go_previous">Previous</button>
+              <input id="current_page" value="1" type="number"/>
+              <button id="go_next">Next</button>
+          </div>
+      </div>
+
+      <div class="item pdf">
+        <div>
+          <div class="pdf-tekst">
+              <h2>Bekijk ons activiteiten boekje</h2>
+          </div>
+        </div>
+      </div>
+   
+      <script>
+          let myState = {
+              pdf: null,
+              currentPage: 1,
+          }
+          pdfjsLib.getDocument('./PDF/Boek.pdf').then((pdf) => {
+              myState.pdf = pdf;
+              render();
+          });
+   
+          function render() {
+              myState.pdf.getPage(myState.currentPage).then((page) => {
+                  let canvas = document.getElementById("pdf_renderer");
+                  let ctx = canvas.getContext('2d');
+                  let viewport = page.getViewport(myState.zoom);
+                  canvas.width = viewport.width;
+                  canvas.height = viewport.height;
+                  page.render({
+                      canvasContext: ctx,
+                      viewport: viewport
+                  });
+              });
+          }
+   
+          document.getElementById('go_previous').addEventListener('click', (e) => {
+              if(myState.pdf == null || myState.currentPage == 1) 
+                return;
+              myState.currentPage -= 1;
+              document.getElementById("current_page").value = myState.currentPage;
+              render();
+          });
+   
+          document.getElementById('go_next').addEventListener('click', (e) => {
+              if(myState.pdf == null || myState.currentPage > myState.pdf._pdfInfo.numPages) 
+                 return;
+              myState.currentPage += 1;
+              document.getElementById("current_page").value = myState.currentPage;
+              render();
+          });
+   
+          document.getElementById('current_page').addEventListener('keypress', (e) => {
+              if(myState.pdf == null) return;
+            
+              
+              let code = (e.keyCode ? e.keyCode : e.which);
+            
+              
+              if(code == 13) {
+                  let desiredPage = 
+                  document.getElementById('current_page').valueAsNumber;
+                                    
+                  if(desiredPage >= 1 && desiredPage <= myState.pdf._pdfInfo.numPages) {
+                      myState.currentPage = desiredPage;
+                      document.getElementById("current_page").value = desiredPage;
+                      render();
+                  }
+              }
+          });
+      </script>
+
+              
+        <!-- <div class="calendar">
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;src=amVuc21jNDQ0NEBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZzQwMGUxc21qYm5qdDMzcjQwbmRycG50bDI2c2RpaDFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%237986CB&amp;color=%23C0CA33&amp;color=%23D50000&amp;showPrint=0&amp;showDate=1&amp;showTz=0" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div> -->
+
+    </div>
+
+        <footer class="footer-activiteiten">
+          <div class="green">
+            <div>
+              <p class="footer-stapsteen">
+                Stapsteen vzw
+              </p>
+              <p>
+                Chrysantenstraat 33 1020 Laken (Brussel)
+              </p>
+              <p>
+                IBAN BE21 6528 1576 2103
+              </p>
+            </div>
+            <div>
+              <p>
+                Nederlands
+              </p>
+              <p>
+                English
+              </p>
+              <p>
+                Francais
+              </p>
+            </div>
+
+            <div class="footer-flex">
+                <div class="footer-erkend">
+                  <p>
+                    Erkend en gesubsidiëerd door:
+                  </p>
+                  <figure>
+                    <img
+                      src="https://www.kindengezin.be/img/kind-en-gezin.png"
+                      alt="Kind & Gezin"
+                    />
+                    <img
+                      src="https://www.kbs-frb.be/images/kbs_logo_nl.svg"
+                      alt="Koning Boudewijnstichting"
+                    />
+                  </figure>
+                </div>
+                <div class="footer-gesponsord">
+                  <p>
+                    Gesponsord door:
+                  </p>
+                  <figure>
+                    <img src="https://www.skryv.com/static/logo.png" alt="skryv" />
+                  </figure>
+                </div>
+              </div>
+
+          </div>
+        </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+  <script src="./js/index.js" type="text/javascript"></script>
+  <script src="./js/firebase.js" type="module"></script>
+</html>
