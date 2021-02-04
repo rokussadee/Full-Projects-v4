@@ -285,7 +285,9 @@ PDF
   overflow: auto;
   background: #333;
   border: solid 3px;
-  height: 500px;
+  /* height: 95%; */
+  height: 601px;
+  width: 426px;
   border-radius: 15px;
   margin-bottom: 10px;
 }
